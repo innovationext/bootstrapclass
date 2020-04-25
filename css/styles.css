@@ -15,8 +15,8 @@ header h2 {
 }
 
 .site-footer {
-    background-image: linear-gradient(#CEC8FF,white);
-    padding: 20 px 0;
+    background-image: linear-gradient(#b7a8f8,white);
+    padding: 20px 0px;
 }
 
 .jumbotron {
@@ -27,7 +27,7 @@ header h2 {
     color: white;
 }
 
-.row_content {
+.row-content {
     padding: 50px 0;
     border-bottom: 1px ridge;
     min-height: 200px;
