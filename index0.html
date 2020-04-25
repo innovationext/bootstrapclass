@@ -2,53 +2,40 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags always come first -->
+    <!-- initial code
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-
-    <!-- Additional CSS must be placed after Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    <link rel="stylesheet" href="css/styles.css" />
     <title>NuCamp: A Better Way To Camp</title>
+    Mark May-->   
+     <!-- Required meta tags always come first -->
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+ 
+     <!-- Additional CSS must be palced after Bootstrap CSS -->
+     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+     <link rel="stylesheet" href="css/styles.css" />
 
-    <!--
-        <style>
-        .container {
-            border: solid blue;
-        }
-        .row {
-            border: solid yellow;
-        }
-        .col {
-            border: solid lightgreen;
-        }
-        .col-sm-4 {
-            border: solid purple;
-        }
-    </style>
-    -->
-    
+     <title>NuCamp: A Better Way To Camp</title>
 </head>
 
 <body>
 
     <header class="jumbotron jumbotron-fluid">
-        <div class="col-4 col-sm-3 col-md-2 align-self-center">
-            <img src="img/logo.png" class="img-fluid" />
-         </div>
-                  
-        
-          
         <div class="container">
-            <div class="row">
+            <div class="row">   
+                <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                    <img src="img/logo.png" class="img-fluid" />
+                 </div>
                 <div class="col">
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
+                </div>
+                <div class="col-md-4 col-lg-4 col-2">
+                    <a role="button" class="btn btn-primary"  href="#reservForm">Reserve Your Spot!</a>
                 </div>
             </div>
         </div>
@@ -56,9 +43,9 @@
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-                <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>  
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+                    <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="nucampNavbar">
                 <ul class="navbar-nav">
@@ -86,7 +73,9 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="container">
         <div class="row row-content align-items-center">
             <div class="col-sm-4 col-md-3">
                 <h2>Featured Campsites</h2>
@@ -95,13 +84,15 @@
                 <div class="media">
                     <div class="media-body align-self-center">
                         <h3>React Lake Campground</h3>
-                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                        <p class="d-none and d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
                     </div>
                     <img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="Breadcrumb Trail" />
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="container">
         <div class="row row-content align-items-center">
             <div class="col-sm-4 order-sm-last col-md-3">
                 <h2 class="text-sm-right">Our Community Partners</h2>
@@ -116,77 +107,61 @@
                 </div>
             </div>
         </div>
-
         <div class="row row-content align-items-center">
-            <div class="col-sm-6 mx-auto">
+            <div class=col-sm-6 mx-auto>
                 <div class="card">
-                    <h3 class="card-header bg-info text-white"></h3>
+                    <div class="card">
+                        <h3 class="card-header bg-info text-white"></h3>
                         <div class="card-body">
-                            <form>
-                                <div class="form-group row">
-                                    <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
-                                    <div class="col">
-                                        <select name="numCampers" id="numCampers" class="form-control">
-                                            <option selected>Select...</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
+                            <form id="reserveForm">
+                                <div class="row form-group">
+                                    <div class="col col-sm-6 col-form-label">
+                                        <label for="numCampers">Number of Campers</label>
+                                        <select class="form-control" id="numCampers" name="numCampers">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="date" class="col-sm-6 col-form-label">Date</label>
-                                    <div class="col">
-                                        <input type="date" class="form-control" id="date" name="date" placeholder="" />
+                                <div class="row form-group">
+                                    <div class="col col-sm-6 col-form-label">
+                                        <label for="date">Date</label>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="date" id="date" name="date">
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="row form-group">
                                     <div class="col">
                                         <button type="submit" class="btn btn-primary">Reserve</button>
                                     </div>
                                 </div>
-                            </form>
+                            </from>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!--
-    <div class="container">
-        <div class="row">
-            <div class="col">1</div>
-            <div class="col">2</div>
-            <div class="col">3</div>
-            <div class="col">4</div>
-            <div class="col">5</div>
-            <div class="col">6</div>
-            <div class="col">7</div>
-            <div class="col">8</div>
-            <div class="col">9</div>
-            <div class="col">10</div>
-            <div class="col">11</div>
-            <div class="col">12</div>
-        </div>
-    </div>
-    -->
     <footer class="site-footer">
         <div class="container">
-            <div class="row">             
-                <div class="col-4 col-sm-2">
+            <div class="row">
+                <div class="col-4 col-sm-2 offset-1" >
                     <h5>Links</h5>
-            		<ul ul class="list-unstyled">
+                    <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="aboutus.html">About</a></li>
                         <li><a href="#">Sites</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-sm-5 text-center">
-                	<h5>Social</h5>
+                    <h5>Social</h5>
                     <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
                     <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
                     <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
@@ -195,8 +170,8 @@
                 <div class="col-sm-4 text-center">
                     <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i> 1-206-555-1234</a><br />
                     <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
-                </div>                
-           </div>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -204,7 +179,6 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
